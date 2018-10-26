@@ -1,0 +1,18 @@
+dist: trusty
+sudo: false
+
+language: node_js
+node_js:
+  - "7"
+
+install:
+  - npm install truffle
+  - npm install ethereumjs-testrpc
+  - npm install web3-utils
+  - npm install secp256k1
+
+before_script:
+  - testrpc > testrpc.log &
+
+script:
+  - truffle test
