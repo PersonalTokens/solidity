@@ -8,8 +8,7 @@ node_js:
 install:
   - npm install truffle
   - npm install ganache-cli
-  - npm install web3-utils
-  - npm install secp256k1
+  - npm install
 
 before_script:
   - ganache-cli > ganache.log &
