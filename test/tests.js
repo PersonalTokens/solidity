@@ -81,7 +81,11 @@ contract('Treasurer', function(accounts) {
           return PersonalToken.deployed().then(function(instance) {
             return instance.balanceOf.call(accounts[1]);
           }).then(function(balance) {
-            assert.equal(balance.valueOf(), 10, 'Withdrawn value is different than 10');
+            return PersonalToken.deployed().then(function(instance) {
+              instance.transfer(TreasurerWallet.address, 10, {from: accounts[1]}).then(function() {
+                assert.equal(balance.valueOf(), 10, 'Withdrawn value is different than 10');
+              });
+            });
           });
         });
       })
