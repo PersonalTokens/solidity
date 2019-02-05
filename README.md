@@ -2,7 +2,6 @@
 
 This repository hosts source code of on-chain part of [Personal Tokens](https://personaltokens.io).
 All smart contracts are located in the contracts folder.
-Snapshots of [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-solidity) dependencies are located in OpenZeppelin subdirectory.
 
 ## Development
 
@@ -30,42 +29,6 @@ Setup:
 ### Contract `PersonalToken`
 
 ERC20 compatible token contract, see [wiki for documentation](https://theethereum.wiki/w/index.php/ERC20_Token_Standard).
-
-### Contract `Treasurer`
-
-Contract responsible for paying out tokens kept by `TreasurerWallet`.
-
-#### Events
-
-` event Withdrawal(address token, address to, uint256 value, bytes signature)`
-
-#### Methods
-
-`function withdraw(ERC20Basic _token, address _to, uint256 _value, uint _timestamp, bytes _signature) public onlyValidSignatureAndData(_signature)`
-
-### Contract `TreasurerWallet`
-
-Contract for keeping tokens.
-
-#### Events
-
-`event Withdrawal(address token, address to, uint256 value)`
-
-#### Modifiers
-
-`modifier onlyTreasurer()`
-
-#### Methods
-
-`function setTreasurer(address _treasurer) public onlyOwner`
-
-`function migrate(address _wallet, ERC20Basic[] _tokens) public onlyOwner`
-
-`function withdraw(ERC20Basic _token, address _to, uint256 _value) public onlyTreasurer`
-
-#### Public Variables
-
-`address public treasurer;`
 
 ## About Personal Tokens
 
