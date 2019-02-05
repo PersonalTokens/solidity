@@ -26,9 +26,17 @@ Setup:
 
 ## Contracts
 
+Token contracts are based on [OpenZeppelin framework](https://github.com/OpenZeppelin/openzeppelin-solidity).
+
 ### Contract `PersonalToken`
 
 ERC20 compatible token contract, see [wiki for documentation](https://theethereum.wiki/w/index.php/ERC20_Token_Standard).
+Used for creation of Personal Tokens by the users of the platform.
+
+### Contract `PersonToken`
+
+ERC20 compatible token contract, see [wiki for documentation](https://theethereum.wiki/w/index.php/ERC20_Token_Standard).
+Used by PERSON, utility token which is used on the platform to pay for additional services but It also gives holders ability to withdraw personal tokens from the PERSON FUND.
 
 ## About Personal Tokens
 
@@ -37,7 +45,7 @@ We are aiming to build a robust and decentralized platform as possible. Our goal
 
 ## License
 
-    Copyright (c) 2018 Trifinity.io
+    Copyright (c) 2018 - 2019 Trifinity.io
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
