@@ -1,13 +1,13 @@
 pragma solidity 0.4.25;
 
-import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20Burnable.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
 
 /**
  * @title PersonalToken
  * @dev Personal Token contract.
  */
-contract PersonalToken is ERC20, ERC20Detailed {
+contract PersonalToken is ERC20Burnable, ERC20Detailed {
   /**
    * @dev Mints all tokens to given accounts.
    * @param name Name of the token.

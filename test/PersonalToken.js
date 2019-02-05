@@ -31,4 +31,11 @@ contract('PersonalToken', function(accounts) {
 
     assert.equal((await instance.balanceOf.call(accounts[1])).toNumber(), 207900000000, 'Treasurer deposit is different than 207900000000');
   });
+  it('check total supply of PersonalToken after burning tokens', async() => {
+    const instance = await PersonalToken.deployed();
+
+    await instance.burn('2100000000');
+
+    assert.equal((await instance.totalSupply.call()).toNumber(), 207900000000, 'Total supply is different than 207900000000');
+  });
 });
