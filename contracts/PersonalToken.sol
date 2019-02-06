@@ -1,4 +1,4 @@
-pragma solidity 0.4.25;
+pragma solidity 0.5.3;
 
 import "openzeppelin-solidity/contracts/token/ERC20/ERC20Burnable.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
@@ -15,7 +15,7 @@ contract PersonalToken is ERC20Burnable, ERC20Detailed {
    * @param keeper Address of the keeper.
    * @param treasurer Address of the treasurer.
    */
-  constructor(string name, string symbol, address keeper, address treasurer) public ERC20Detailed(name, symbol, 4) {
+  constructor(string memory name, string memory symbol, address keeper, address treasurer) public ERC20Detailed(name, symbol, 4) {
     uint256 totalSupply = 210000000000;
     uint256 deposit = 2100000000;
 
